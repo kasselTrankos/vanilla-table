@@ -9,10 +9,8 @@ var b = browserify({
   	debug: true,
   	packageCache: {},
 })
-.transform(babelify, {presets: ["es2015"], plugins: [ "transform-object-rest-spread"]});
-
-b
-.on('update', bundle)
+.transform(babelify, {presets: ["es2016"], plugins: [ "transform-object-rest-spread"]});
+b.on('update', bundle)
 .bundle()
 .pipe(fs.createWriteStream("build.js"));
 
