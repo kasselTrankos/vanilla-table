@@ -7,6 +7,7 @@ npm start
 
 And navigate to [localhost:9001](http://localhost:9001)
 
+I use mine esnode lib, so this is not a thirdparty library.
 
 
 This is a little work with Vanilla, and emacscript 2016.

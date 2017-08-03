@@ -18,6 +18,7 @@
     "babelify": "^7.3.0",
     "browserify": "^14.4.0",
     "concurrently": "^3.5.0",
+    "esnode": "^1.0.5",
     "lodash": "^4.17.4",
     "watchify": "^3.9.0"
   }
