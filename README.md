@@ -10,15 +10,19 @@ And navigate to [localhost:9001](http://localhost:9001)
 
 This is a little work with Vanilla, and emacscript 2016.
 
-One idea is no use third party library of notbody( even my loved lodash, or jquey, or any).
+One must, is no use third party library of notbody( even my loved lodash, or jquey, or any).
 
-Two idea is to make the components, pieces functionalities. The more sparately between.
+Two must, is to make the components, pieces functionalities. The more sparately between.
+
+There is this proxys:
+- **draw:thead**:  this is called before thead is added to table DOM.
+- **draw:thead:th**: this is called before each th into thead is added to table DOM.
+
 
 Now you can inject to header, a search, using the resource input.search. Using the proxy, at the position "header:draw:td",
 you got full access to the th ->td.
 ```javascript
 	.proxy('draw:thead', function(elm){
-      console.log(elm, 'header:draw:thead');
       let _this = this;
       let tr = document.createElement('tr'),
       td = document.createElement('td');
