@@ -17,18 +17,26 @@ Two idea is to make the components, pieces functionalities. The more sparately b
 Now you can inject to header, a search, using the resource input.search. Using the proxy, at the position "header:draw:td",
 you got full access to the th ->td.
 ```javascript
-	.proxy("header:draw:td", function(elm) {
-		let _this = this;
-  		Search(elm)
-  		.reset(function(e){
-  			let results =  [...data];
-  			_this.data(onSearched.apply(this, [results]));
-  		})
-  		.create('change', function(e){
-  			let results =  [...data];
-  			_this.data(onSearched.apply(this, [results, e]));
-  		});
-  	})
+	.proxy('draw:thead', function(elm){
+      console.log(elm, 'header:draw:thead');
+      let _this = this;
+      let tr = document.createElement('tr'),
+      td = document.createElement('td');
+      tr.appendChild(td);
+      for(let i=1; i<HEADER.length; i++){
+        td = document.createElement('td');
+        td.innerHTML = HEADER[i].name;
+        tr.appendChild(td);
+        Search(td)
+              .onFilter(function(e){
+                console.log(e);
+                let results =  [...data];
+                _this.data(onSearched.apply(this, [results, e]));
+              })
+              .create('change');
+      }
+      elm.appendChild(tr);
+    })
 ```
 
 
