@@ -32,12 +32,11 @@ you got full access to the th ->td.
         td.innerHTML = HEADER[i].name;
         tr.appendChild(td);
         Search(td)
-              .onFilter(function(e){
-                console.log(e);
-                let results =  [...data];
-                _this.data(onSearched.apply(this, [results, e]));
-              })
-              .create('change');
+          .onFilter(function(e){
+            let results =  [...data];
+            _this.data(onSearched.apply(this, [results, e]));
+          })
+          .create('change');
       }
       elm.appendChild(tr);
     })
