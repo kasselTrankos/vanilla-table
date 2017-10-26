@@ -7,7 +7,7 @@ const port = process.argv[2] || 9001;
 http.createServer(function (req, res) {
   console.log(`${req.method} ${req.url}`);
   // parse URL
-  const parsedUrl = url.parse(req.url);
+  const parsedUrl =  url.parse(req.url);
   // extract URL path
   let pathname = `.${parsedUrl.pathname}`;
   // maps file extention to MIME types
@@ -29,11 +29,12 @@ http.createServer(function (req, res) {
   };
   fs.exists(pathname, function (exist) {
     if(!exist) {
-      var e = exist ? 'it\'s there' : 'no passwd!';
+      pathname = '.';
+      //var e = exist ? 'it\'s there' : 'no exists!';
       // if the file is not found, return 404
-      res.statusCode = 404;
-      res.end(`File ${pathname} not found! ${e}`);
-      return;
+      //res.statusCode = 404;
+      //res.end(`File ${pathname} not found! ${e}`);
+      //return;
     }
     // if is a directory, then look for index.html
     if (fs.statSync(pathname).isDirectory()) {
