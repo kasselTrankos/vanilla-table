@@ -19,5 +19,8 @@
     "browserify": "^14.4.0",
     "concurrently": "^3.5.0",
     "watchify": "^3.9.0"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-class-properties": "^6.24.1"
   }
 }
