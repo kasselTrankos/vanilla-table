@@ -17,6 +17,7 @@ Two must, is to make the components, pieces functionalities. The more sparately 
 There is this proxys:
 - **draw:thead**:  this is called before thead is added to table DOM.
 - **draw:thead:th**: this is called before each th into thead is added to table DOM.
+- **draw:table**: this is called at the end generated and appended table.
 
 
 Now you can inject to header, a search, using the resource input.search. Using the proxy, at the position "header:draw:td",
