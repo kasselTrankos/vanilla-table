@@ -1,5 +1,8 @@
 # Vanilla Table
 
+### Status
+[![Build Status](https://travis-ci.org/kasselTrankos/vanilla-table/UtilityBehaviors.png)](https://travis-ci.org/kasselTrankos/vanilla-table)
+
 ```npm
 npm i
 npm start
