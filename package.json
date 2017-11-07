@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node test/table.test.js | tap-spec",
+    "test": "node test/**.test.js | tap-spec",
     "start": "concurrently \"node es2016\" \"node static_server\""
   },
   "keywords": [],
