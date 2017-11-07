@@ -1,7 +1,7 @@
 # Vanilla Table
 
 ### Status
-[![Build Status](https://travis-ci.org/kasselTrankos/vanilla-table/UtilityBehaviors.png)](https://travis-ci.org/kasselTrankos/vanilla-table)
+[![Build Status](https://api.travis-ci.org/kasselTrankos/vanilla-table.svg?branch=master)](https://travis-ci.org/kasselTrankos/vanilla-table)
 
 ```npm
 npm i
