@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "testcafe": "./node_modules/.bin/testcafe chromium test/**/*.e2e.js",
+    "testcafe": "./node_modules/.bin/testcafe firefox test/**/*.e2e.js",
     "test": "./node_modules/.bin/tape test/**/*.test.js | tap-spec && npm run testcafe",
     "start": "concurrently \"node es2016\" \"node static_server\""
   },
