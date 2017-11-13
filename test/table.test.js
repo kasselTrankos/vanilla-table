@@ -13,9 +13,8 @@ global.document = DOM.window.document;
 test('Every time Table is created with no header array values', ({ok, end})=> {
 	spy(Proxy, 'make');
   	Table();
-  	ok(Proxy.make.callCount===2, 'Proxy.make must be called 2 times');
-  	ok(global.document.getElementsByTagName("table").length>0 , 'Create a table dom');
-  	ok(Object.keys(Proxy.make.getCall(0).args[0])[0]==='draw:thead', 'first call is is to draw:thead');
+  	ok(Proxy.make.callCount===0, 'Proxy.make must be called 0 times because there is no data, header, pagination..');
+  	ok(global.document.getElementsByTagName("table").length===0 , 'No Creation of a table dom');
   	Proxy.make.restore();
   	end();
 });
