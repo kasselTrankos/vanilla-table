@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "testcafe": "./node_modules/.bin/testcafe firefox test/**/*.e2e.js",
-    "test": "concurrently \"node es2016\" \"node static_server\" \"node tape\" \"node testcafe\"",
+    "test": "node all",
     "tape": "./node_modules/.bin/tape test/**/*.test.js | tap-spec",
     "start": "concurrently \"node es2016\" \"node static_server\"",
     "tape": "node test/*.test.js | tap-spec"
