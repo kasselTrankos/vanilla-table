@@ -23,8 +23,7 @@ test('Every chain added to Table called addClass, and header', ({ok, end})=>{
 	spy(_table, 'redraw');
 	spy(Proxy, 'run')
 	_table.header([{name: 'op'}]).addClass(['koolo']);
-	
-  	ok(_table.redraw.called===true, 'redraw is called');
+  	ok(_table.redraw.called===false, 'redraw is NOT called');
   	ok(Proxy.run.callCount===2, 'Proxy run is called twice, once for addClass, and other for header');
 
   	_table.redraw.restore();
