@@ -1,8 +1,8 @@
-const execFile = require('child_process').execFile,
-	spawn = require('child_process').spawn;
+const execFile = require('child_process').execFile;
+
 const es2016 = execFile('node', ['es2016'], (error, stdout, stderr) => {
     if (error) {
-        // console.error('stderr', stderr);
+        console.error('stderr', stderr);
         // exec('kill -9 $(lsof -t -i:9001 -sTCP:LISTEN)');
         // spawn("sh", ["-c", "kill -INT -"+es2016.pid]);
         // throw error;

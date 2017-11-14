@@ -17,8 +17,8 @@ console.info(`Created code at ${new Date().toISOString()}`);
 function bundle(err){
     if(err) {
       console.info(`Error ${err} at ${new Date().toISOString()}`);  
-      return false
+      // return false
     }
-  	console.debug(`Updated code at ${new Date().toISOString()}`);
+  	console.info(`Updated code at ${new Date().toISOString()}`);
   	b.bundle().pipe(fs.createWriteStream("build.js"));
   }
