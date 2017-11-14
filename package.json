@@ -7,7 +7,7 @@
     "testcafe": "./node_modules/.bin/testcafe chromium, firefox test/**/*.e2e.js --app 'node make'",
     "test": "npm run tape && npm run testcafe",
     "tape": "node test/*.test.js | tap-spec",
-    "start": "node make"
+    "start": "concurrently \"node es2016\" \"node static_server\""
   },
   "keywords": [],
   "author": "",
@@ -19,6 +19,7 @@
     "babel-preset-es2016": "^6.24.1",
     "babelify": "^7.3.0",
     "browserify": "^14.4.0",
+    "concurrently": "^3.5.0",
     "watchify": "^3.9.0"
   },
   "devDependencies": {
