@@ -8,15 +8,17 @@ var b = browserify({
 	  cache: {},
   	debug: true,
   	packageCache: {},
-})
+});
 .transform(babelify, {presets: ["es2016"], plugins: [ "transform-object-rest-spread", ["transform-class-properties", { "spec": true }]]});
 b.on('update', bundle)
 .bundle()
 .pipe(fs.createWriteStream("build.js"));
-
-
-console.log(`Created code at ${new Date().toISOString()}`);
+console.debug(`Created code at ${new Date().toISOString()}`);
 function bundle(err){
-  	console.log(`Updated code at ${new Date().toISOString()}`);
+    if(err) {
+      console.debug(`Error ${err} at ${new Date().toISOString()}`);  
+      return false
+    }
+  	console.debug(`Updated code at ${new Date().toISOString()}`);
   	b.bundle().pipe(fs.createWriteStream("build.js"));
   }
