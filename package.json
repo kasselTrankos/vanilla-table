@@ -4,11 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "testcafe": "./node_modules/.bin/testcafe chromium test/**/*.e2e.js --app 'node all'",
+    "testcafe": "./node_modules/.bin/testcafe chromium, firefox test/**/*.e2e.js --app 'node all'",
     "test": "npm run tape && npm run testcafe",
-    "tape": "./node_modules/.bin/tape test/**/*.test.js | tap-spec",
-    "start": "concurrently \"node es2016\" \"node static_server\"",
-    "tape": "node test/*.test.js | tap-spec"
+    "tape": "node test/*.test.js | tap-spec",
+    "start": "node make"
   },
   "keywords": [],
   "author": "",
@@ -20,7 +19,6 @@
     "babel-preset-es2016": "^6.24.1",
     "babelify": "^7.3.0",
     "browserify": "^14.4.0",
-    "concurrently": "^3.5.0",
     "watchify": "^3.9.0"
   },
   "devDependencies": {
