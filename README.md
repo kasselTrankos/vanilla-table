@@ -1,7 +1,8 @@
 # Vanilla Table
 
-### Status
-[![Build Status](https://api.travis-ci.org/kasselTrankos/vanilla-table.svg?branch=master)](https://travis-ci.org/kasselTrankos/vanilla-table)
+[![travis](https://api.travis-ci.org/kasselTrankos/vanilla-table.svg?branch=master)](https://travis-ci.org/kasselTrankos/vanilla-table)
+
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/kasselTrankos/vanilla-table/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/kasselTrankos/vanilla-table/?branch=master)
 
 ```npm
 npm i

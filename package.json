@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "testcafe": "./node_modules/.bin/testcafe chromium, firefox test/**/*.e2e.js --app 'node all'",
+    "testcafe": "./node_modules/.bin/testcafe chromium, firefox test/**/*.e2e.js --app 'node make'",
     "test": "npm run tape && npm run testcafe",
     "tape": "node test/*.test.js | tap-spec",
     "start": "node make"
